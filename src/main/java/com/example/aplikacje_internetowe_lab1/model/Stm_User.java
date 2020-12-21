@@ -33,8 +33,18 @@ public class Stm_User {
     @JsonIgnoreProperties({"stm_user"})
     private List<STM_Task> zadania;
 
+    public Stm_User(String name, String lastName, String email, String password, boolean status) {
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.status = status;
+    }
 
-
-
-
+    public Stm_User(String name, String lastName, String email, String password) {
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
 }
