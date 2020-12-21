@@ -22,6 +22,7 @@ public class STM_Task {
     private int taskId;
     private String title;
     private String description;
+    private  LocalDateTime now;
 
     private LocalDateTime dateAdded = LocalDateTime.now();;
     @Enumerated(value = EnumType.STRING)
@@ -33,4 +34,13 @@ public class STM_Task {
     @JoinColumn(name = "user_id")
     private Stm_User stmUser;
 
+
+    public STM_Task(String title, String description, LocalDateTime now, STM_Type type, STM_Status status, Stm_User userId) {
+        this.title = title;
+        this.description = description;
+        this.now = now;
+        stmType = type;
+        stmStatus = status;
+        stmUser = userId;
+    }
 }
